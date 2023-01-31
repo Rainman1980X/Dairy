@@ -7,7 +7,7 @@ plugins {
     id 'org.asciidoctor.convert' version '2.4.0'
 }
 
-group = 'matthias.burger.de'
+group = 'burger-it.de'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '19'
 
