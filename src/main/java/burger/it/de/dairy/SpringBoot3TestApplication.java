@@ -1,4 +1,4 @@
-package matthias.burger.de.dairy;
+package burger.it.de.dairy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

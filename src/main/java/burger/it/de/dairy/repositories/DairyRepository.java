@@ -1,6 +1,6 @@
-package matthias.burger.de.dairy.repositories;
+package burger.it.de.dairy.repositories;
 
-import matthias.burger.de.dairy.model.DairyEntry;
+import burger.it.de.dairy.model.DairyEntry;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

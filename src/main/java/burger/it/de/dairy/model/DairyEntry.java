@@ -1,4 +1,4 @@
-package matthias.burger.de.dairy.model;
+package burger.it.de.dairy.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
