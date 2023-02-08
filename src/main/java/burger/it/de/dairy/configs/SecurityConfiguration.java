@@ -18,7 +18,10 @@ public class SecurityConfiguration {
         return http
                 .authorizeHttpRequests(auth -> {
                     auth.requestMatchers("/").authenticated();
+                    //auth.requestMatchers("/v3/api-docs/**","/swagger-ui/**").authenticated();
+
                     auth.anyRequest().permitAll();
+
                 })
                 .httpBasic(withDefaults())
                 .build();
