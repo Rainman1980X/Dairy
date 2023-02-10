@@ -15,22 +15,6 @@ spring:
         console:
           enabled: true
 
-management:
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-  security:
-    enabled: false
-
-  tracing:
-    sampling:
-      probability: 1.0
-
 jdbc:
   datasource-proxy:
     # enable and configure query logging
