@@ -3,9 +3,9 @@ package burger.it.de.dairy.controllers;
 import burger.it.de.dairy.models.DairyEntry;
 import burger.it.de.dairy.repositories.DairyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,7 +17,12 @@ public class DairyController {
     private DairyRepository dairyRepository;
 
     @GetMapping
-    public List<DairyEntry> findAll(){
+    public List<DairyEntry> findAll() {
         return dairyRepository.findAll();
+    }
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public void create(@RequestBody DairyEntry entry){
+        dairyRepository.save(entry);
     }
 }

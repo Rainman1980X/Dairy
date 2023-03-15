@@ -4,16 +4,22 @@ spring:
     problemdetails:
       enabled: true
   jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
     show-sql: true
     hibernate:
       ddl-auto: update
   datasource:
-    hikari:
-      username: sa
-      password: sa
+    url: jdbc:h2:mem:dairy
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
     h2:
-        console:
-          enabled: true
+      console.enabled: true
+      console:
+        path: /h2-console
+        settings.trace: false
+        settings.web-allow-others: false
 
 jdbc:
   datasource-proxy:
@@ -41,15 +47,3 @@ logging:
     datasource-query-logger: INFO
     org.springframework.data: DEBUG
 
-#security.basic.enabled=false
-#management.security.enabled=false
-
-## JPA/Hibernate
-#spring.jpa.show-sql=true
-#spring.jpa.hibernate.ddl-auto=update
-#spring.datasource.url=jdbc:h2:mem:testdb
-#spring.datasource.driverClassName=org.h2.Driver
-#spring.datasource.username=sa
-#spring.datasource.password=sa
-#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-#spring.h2.console.enabled=true
